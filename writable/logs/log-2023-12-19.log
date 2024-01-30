@@ -1,0 +1,67 @@
+CRITICAL - 2023-12-19 09:15:57 --> Call to undefined method App\Controllers\c_quiz::initController()
+in SYSTEMPATH\CodeIgniter.php on line 915.
+ 1 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 09:16:26 --> Call to undefined method App\Controllers\c_quiz::initController()
+in SYSTEMPATH\CodeIgniter.php on line 915.
+ 1 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 09:16:43 --> Call to undefined method App\Controllers\c_quiz::initController()
+in SYSTEMPATH\CodeIgniter.php on line 915.
+ 1 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 09:17:25 --> Call to undefined method App\Controllers\c_quiz::initController()
+in SYSTEMPATH\CodeIgniter.php on line 915.
+ 1 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 09:17:27 --> Invalid file: "v_vote.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_vote.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_vote', [], true)
+ 3 APPPATH\Controllers\c_vote.php(11): view('v_vote')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_vote->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_vote))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 09:17:42 --> Call to undefined method App\Controllers\c_quiz::initController()
+in SYSTEMPATH\CodeIgniter.php on line 915.
+ 1 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 13:53:52 --> form_open(): Argument #1 ($action) must be of type string, array given, called in C:\wamp_2SIO\www\espace_jeux_video\app\Views\v_vote.php on line 41
+in SYSTEMPATH\Helpers\form_helper.php on line 29.
+ 1 APPPATH\Views\v_vote.php(41): form_open([...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_vote.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_vote', [], true)
+ 5 APPPATH\Controllers\c_vote.php(11): view('v_vote')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_vote->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_vote))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 13:53:53 --> form_open(): Argument #1 ($action) must be of type string, array given, called in C:\wamp_2SIO\www\espace_jeux_video\app\Views\v_vote.php on line 41
+in SYSTEMPATH\Helpers\form_helper.php on line 29.
+ 1 APPPATH\Views\v_vote.php(41): form_open([...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_vote.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_vote', [], true)
+ 5 APPPATH\Controllers\c_vote.php(11): view('v_vote')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_vote->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_vote))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 13:54:00 --> form_open(): Argument #1 ($action) must be of type string, array given, called in C:\wamp_2SIO\www\espace_jeux_video\app\Views\v_vote.php on line 41
+in SYSTEMPATH\Helpers\form_helper.php on line 29.
+ 1 APPPATH\Views\v_vote.php(41): form_open([...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_vote.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_vote', [], true)
+ 5 APPPATH\Controllers\c_vote.php(11): view('v_vote')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_vote->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_vote))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

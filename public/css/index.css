@@ -1,0 +1,187 @@
+@import 'navbar.css';
+@import "form.css";
+
+body
+{
+    background: #262424;
+    font-family: Arial, serif;
+    margin: 0 auto;
+    color: white;
+}
+
+
+.footer
+{
+    margin-top: 100px;
+    background: #383838;
+    text-align: center;
+}
+
+.footer > h4
+{
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.corps {
+    display: flex;
+    margin: 100px;
+}
+
+.block {
+    display: block;
+}
+
+.inscription, .connexion, .interface {
+    width: 100%;
+}
+
+.interface {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.interface-item {
+    margin: 30px;
+}
+
+.gauche,
+.droite {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauche > h2,
+.gauche > p {
+    width: 75%;
+}
+
+.image, .register-img
+{
+    width: 80%;
+}
+
+.switch-navbar
+{
+    display: none;
+}
+
+.active
+{
+    margin-top: 0;
+}
+
+.tournoi {
+    width: 80%;
+    align-items: center;
+    display: none;
+}
+
+.pourcentage
+{
+    float: right;
+}
+
+.progress-bar
+{
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    background: #ffffff;
+    margin-top: 30px;
+}
+
+.progression {
+    background: #25C7D1;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.timer
+{
+    display: none;
+    text-align: center;
+}
+
+.timer > div
+{
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 950px) {
+    .corps {
+        display: block;
+        margin: 0 50px 0 50px;
+    }
+
+    .gauche,
+    .droite {
+        width: 100%;
+    }
+
+    .droite {
+        margin-top: 50px;
+    }
+}
+
+/*
+    Début CSS pour le responsive du navbar
+*/
+@media screen and (max-width: 600px) {
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        margin-top: -100vh;
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .corps {
+        display: block;
+        margin: 50px 50px 0 50px;
+    }
+
+    .switch-navbar {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        background: #383838;
+        text-align: center;
+        display: block;
+    }
+
+    .switch-navbar > ul {
+        height: 48px;
+    }
+
+    ul {
+        display: block;
+        margin: -23px -10px -10px;
+        font-size: 18px;
+    }
+
+    li {
+        margin: 20px;
+    }
+
+    .left > ul > li {
+        margin-top: 10%;
+    }
+
+    .show-navbar {
+        cursor: pointer;
+        width: 50px;
+    }
+}
+/*
+    Fin CSS pour le responsive du navbar
+*/

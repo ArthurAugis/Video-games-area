@@ -1,0 +1,976 @@
+CRITICAL - 2024-01-09 08:39:03 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:19 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:23 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:25 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:40 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:40 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:40 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 08:39:41 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 22.
+ 1 APPPATH\Views\v_utilisateur.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 13:14:07 --> Call to undefined function format_number()
+in APPPATH\Views\v_utilisateur.php on line 47.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(11): view('v_utilisateur')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:39:49 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 5.
+ 1 APPPATH\Views\v_utilisateur.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:50:53 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:51:07 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:51:47 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:51:59 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:52:13 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 14:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 14:54:45 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp_2SIO\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(99): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:00:52 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(100): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:01:20 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(102): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:02:48 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:02:49 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:02:49 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:02:49 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:02:57 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:05:40 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:05:40 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:05:41 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:05:41 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:06:42 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:07:02 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:09:03 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 45.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:09:36 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 63.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:10:12 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 95.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 15:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 15:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 15:11:34 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:48:05 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(103): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:50:09 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(104): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:50:10 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(104): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:50:35 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:50:35 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 21:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:51:56 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 21:56:18 --> Undefined property: App\Controllers\c_utilisateur::$input
+in APPPATH\Controllers\c_utilisateur.php on line 45.
+ 1 APPPATH\Controllers\c_utilisateur.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\c_utilisateur::$input', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:57:24 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:57:26 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:57:26 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:57:27 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 21:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 21:58:07 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(105): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:00:34 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(110): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:01:00 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 11.
+ 1 APPPATH\Views\v_utilisateur.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(110): view('v_utilisateur')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:01:08 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(109): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:01:12 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(110): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:01:26 --> Call to a member function getError() on null
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 4 APPPATH\Controllers\c_utilisateur.php(110): view('v_utilisateur', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:02:01 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 11.
+ 1 APPPATH\Views\v_utilisateur.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(109): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:31:27 --> Class "App\Models\m_user" not found
+in APPPATH\Controllers\c_utilisateur.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:34:09 --> Class "Models\m_user" not found
+in APPPATH\Controllers\c_utilisateur.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:34:22 --> Class "Models\m_user" not found
+in APPPATH\Controllers\c_utilisateur.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:34:43 --> Class "App\Models\m_user" not found
+in APPPATH\Controllers\c_utilisateur.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:35:55 --> Class "CodeIgniter\Models\m_user" not found
+in APPPATH\Controllers\c_utilisateur.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:37:15 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$lkYS5' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$lkYS5Q.W...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:42:16 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$RUiNR' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$RUiNRueu...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:42:21 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$v986w' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$v986w3UE...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:43:11 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$sN8rt' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$sN8rtqMM...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-09 22:43:11 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 11.
+ 1 APPPATH\Views\v_utilisateur.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 11)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(90): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:46:19 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$AEofQ' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$AEofQSKP...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-09 22:46:19 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 15.
+ 1 APPPATH\Views\v_utilisateur.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 15)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(90): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:46:27 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$nSIZI' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$nSIZIvhE...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-09 22:46:27 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 15.
+ 1 APPPATH\Views\v_utilisateur.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 15)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(90): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:46:41 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$Vg8y/' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$Vg8y/U1d...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:54:56 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$QNWC1' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$QNWC1xvd...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 22:54:58 --> Undefined variable $validation
+in APPPATH\Views\v_utilisateur.php on line 28.
+ 1 APPPATH\Views\v_utilisateur.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(123): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->deconnexion()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 22:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 22:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 22:56:59 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$28NKV' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$28NKVDse...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 22:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 23:04:31 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$bzdsH' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$bzdsHvdK...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 23:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 23:06:25 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$uKuVO' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$uKuVO4Ly...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 23:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 23:08:51 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$6zH7D' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$6zH7Dd8w...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-09 23:08:51 --> Call to undefined method CodeIgniter\Database\Exceptions\DatabaseException::getSqlQuery()
+in APPPATH\Models\m_user.php on line 29.
+ 1 APPPATH\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@grossemerde.fr', '19', '$2y$10$6zH7Dd8wVd4OAfZbaHhlYuwfzaamuPDagxClzmKYjkhehQi1jVpC2')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 23:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-09 23:09:45 --> mysqli_sql_exception: Erreur de syntaxe près de 'SET @p1 = 'rainbowyoshi@grossemerde.fr'; SET @p2 = '19'; SET @p3 = '$2y$10$fQiav' à la ligne 1 in C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\wamp64\www\espace_jeux_video\system\Database\MySQLi\Connection.php(306): mysqli->query('SET @p0 = 'Rain...', 0)
+#1 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SET @p0 = 'Rain...')
+#2 C:\wamp64\www\espace_jeux_video\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SET @p0 = 'Rain...')
+#3 C:\wamp64\www\espace_jeux_video\app\Models\m_user.php(17): CodeIgniter\Database\BaseConnection->query('SET @p0 = ?; SE...', Array)
+#4 C:\wamp64\www\espace_jeux_video\app\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@gr...', '19', '$2y$10$fQiavet7...')
+#5 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+#6 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+#7 C:\wamp64\www\espace_jeux_video\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\espace_jeux_video\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+INFO - 2024-01-09 23:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 23:10:55 --> CodeIgniter\Database\BaseConnection::prepare(): Argument #1 ($func) must be of type Closure, string given, called in C:\wamp64\www\espace_jeux_video\app\Models\m_user.php on line 16
+in SYSTEMPATH\Database\BaseConnection.php on line 921.
+ 1 APPPATH\Models\m_user.php(16): CodeIgniter\Database\BaseConnection->prepare('SET @p0 = ?;')
+ 2 APPPATH\Controllers\c_utilisateur.php(71): App\Models\m_user->createUser('RainbowYoshi', 'rainbowyoshi@grossemerde.fr', '19', '$2y$10$WnO/B0S9TQ5bmJhees1j8eq0G/AsrINe1Dhnabo9DYNVTh9C4quxi')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 23:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-09 23:13:45 --> Undefined variable $titre
+in APPPATH\Views\v_utilisateur.php on line 3.
+ 1 APPPATH\Views\v_utilisateur.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titre', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\wamp64\\www\\espace_jeux_video\\app\\Views\\v_utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_utilisateur', [], true)
+ 5 APPPATH\Controllers\c_utilisateur.php(90): view('v_utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-09 23:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-09 23:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

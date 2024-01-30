@@ -1,0 +1,54 @@
+input
+{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3px;
+}
+
+button[type=submit] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+label {
+    font-weight: 700;
+}
+
+.submitbtn
+{
+    float: right;
+    background: #25C7D1;
+    margin-top: 25px;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+
+.submitbtn:hover
+{
+    background: #26a6b0;
+}
+
+form > h2
+{
+    text-align: center;
+}
+
+select
+{
+    height: 35px;
+    width: 100%;
+}
+
+form
+{
+    width: 100%;
+}
+
+.plateformes
+{
+    margin-top: 50px;
+}

@@ -1,0 +1,88 @@
+INFO - 2024-01-11 17:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:20:02 --> Undefined property: stdClass::$proc_login
+in APPPATH\Models\m_user.php on line 62.
+ 1 APPPATH\Models\m_user.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$proc_login', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Models\\m_user.php', 62)
+ 2 APPPATH\Controllers\c_utilisateur.php(122): App\Models\m_user->loginUser('rainbowyoshi@grossemerde.fr')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:21:13 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 131.
+ 1 APPPATH\Controllers\c_utilisateur.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:23:25 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:23:27 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:23:28 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:24:24 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:24:25 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-11 18:24:26 --> Attempt to read property "mdp" on int
+in APPPATH\Controllers\c_utilisateur.php on line 130.
+ 1 APPPATH\Controllers\c_utilisateur.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "mdp" on int', 'C:\\wamp64\\www\\espace_jeux_video\\app\\Controllers\\c_utilisateur.php', 130)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_utilisateur->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_utilisateur))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-11 18:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 18:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-11 21:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
