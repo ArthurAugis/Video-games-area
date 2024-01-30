@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 30 jan. 2024 à 11:10
+-- Généré le : mar. 30 jan. 2024 à 15:08
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -66,13 +66,6 @@ GROUP BY jeu;
 
 END$$
 
-DROP PROCEDURE IF EXISTS `proc_reset_vote`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_reset_vote` ()   BEGIN
-
-DELETE FROM tab_voter;
-
-END$$
-
 --
 -- Fonctions
 --
@@ -90,6 +83,111 @@ IF EXISTE <> 0 THEN
 	SET RETOUR = -1;
 ELSE
 	INSERT INTO tab_categories(nom_categorie) VALUES (libelle);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajouter_tournoi`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajouter_tournoi` (`jeu_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_tournois.id) INTO EXISTE
+FROM tab_tournois
+WHERE tab_tournois.jeu = jeu_id;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_tournois(jeu) VALUES (jeu_id);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_inscription`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_inscrire.utilisateur) INTO EXISTE
+FROM tab_inscrire
+WHERE tab_inscrire.utilisateur = utilisateur_id AND tab_inscrire.tournoi = tournoi_id;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_inscrire VALUES (utilisateur_id, tournoi_id);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_jeu_plateforme`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_jeu_plateforme` (`jeu_id` INT, `plateforme_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_platforme_jeu.id) INTO EXISTE
+FROM tab_platforme_jeu
+WHERE tab_platforme_jeu.jeu = jeu_id AND tab_platforme_jeu.plateforme = plateforme_id;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_platforme_jeu (jeu, plateforme) VALUES (jeu_id, plateforme_id);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_plateforme`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_plateforme` (`libelle` VARCHAR(50)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_plateformes.id) INTO EXISTE
+FROM tab_plateformes
+WHERE tab_plateformes.nom = libelle;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_plateformes(nom) VALUES (libelle);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_reponse`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_reponse` (`reponse` VARCHAR(300)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_reponses.id) INTO EXISTE
+FROM tab_reponses
+WHERE tab_reponses.libelle = reponse;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_reponses(libelle) VALUES (reponse);
     SET RETOUR = 1;
 END IF;
 
@@ -238,6 +336,132 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_inscription`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_inscrire.utilisateur) INTO EXISTE
+FROM tab_inscrire
+WHERE tab_inscrire.utilisateur = utilisateur_id AND tab_inscrire.tournoi = tournoi_id;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_inscrire WHERE tab_inscrire.utilisateur = utilisateur_id AND tab_inscrire.tournoi = tournoi_id;
+	SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_jeu_plateforme`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_jeu_plateforme` (`jeu_id` INT, `plateforme_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_platforme_jeu.id) INTO EXISTE
+FROM tab_platforme_jeu
+WHERE tab_platforme_jeu.jeu = jeu_id AND tab_platforme_jeu.plateforme = plateforme_id;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_platforme_jeu WHERE tab_platforme_jeu.jeu = jeu_id AND tab_platforme_jeu.plateforme = plateforme_id;
+	SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_plateforme`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_plateforme` (`libelle` VARCHAR(50)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_plateformes.id) INTO EXISTE
+FROM tab_plateformes
+WHERE tab_plateformes.nom = libelle;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM `tab_plateformes` WHERE tab_plateformes.nom = libelle;
+    SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_question`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_question` (`question` VARCHAR(200)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_questions.id) INTO EXISTE
+FROM tab_questions
+WHERE tab_questions.libelle = question;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM `tab_questions` WHERE tab_questions.libelle = question;
+	SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_reponse`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_reponse` (`reponse` VARCHAR(300)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_reponses.id) INTO EXISTE
+FROM tab_reponses
+WHERE tab_reponses.libelle = reponse;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM `tab_reponses` WHERE tab_reponses.libelle = reponse;
+	SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_tournoi`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_tournoi` (`jeu_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_tournois.id) INTO EXISTE
+FROM tab_tournois
+WHERE tab_tournois.jeu = jeu_id;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM `tab_tournois` WHERE tab_tournois.jeu = jeu_id;
+    SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_utilisateur`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_utilisateur` (`mail_user` VARCHAR(100)) RETURNS INT  BEGIN
 
@@ -301,6 +525,27 @@ ELSE
 	INSERT INTO tab_voter (utilisateur, jeu)
     VALUES (utilisateur, jeuChoisi);
     
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `tab_ajout_question`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `tab_ajout_question` (`question` VARCHAR(200)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+SELECT COUNT(tab_questions.id) INTO EXISTE
+FROM tab_questions
+WHERE tab_questions.libelle = question;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_questions(libelle) VALUES (question);
     SET RETOUR = 1;
 END IF;
 
