@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 30 jan. 2024 à 15:08
+-- Généré le : mar. 06 fév. 2024 à 11:09
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -75,6 +75,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajouter_categorie` (`libelle` V
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_categories.id) INTO EXISTE
 FROM tab_categories
 WHERE tab_categories.nom_categorie = libelle;
@@ -96,6 +102,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajouter_tournoi` (`jeu_id` INT)
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_tournois.id) INTO EXISTE
 FROM tab_tournois
 WHERE tab_tournois.jeu = jeu_id;
@@ -111,11 +123,45 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_ajout_classement`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_classement` (`_utilisateur` INT, `_tournoi` INT, `_place` INT, `_eliminer` BOOLEAN) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+SELECT COUNT(tab_classement.tournoi) INTO EXISTE
+FROM tab_classement
+WHERE tab_classement.tournoi = _tournoi
+AND tab_classement.place = _place;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_classement VALUES (_utilisateur, _tournoi, _place, _eliminer);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_ajout_inscription`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_inscrire.utilisateur) INTO EXISTE
 FROM tab_inscrire
@@ -138,6 +184,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_jeu_plateforme` (`jeu_id`
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_platforme_jeu.id) INTO EXISTE
 FROM tab_platforme_jeu
 WHERE tab_platforme_jeu.jeu = jeu_id AND tab_platforme_jeu.plateforme = plateforme_id;
@@ -159,6 +211,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_plateforme` (`libelle` VA
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_plateformes.id) INTO EXISTE
 FROM tab_plateformes
 WHERE tab_plateformes.nom = libelle;
@@ -174,11 +232,61 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_ajout_question`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_question` (`question` VARCHAR(200)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+SELECT COUNT(tab_questions.id) INTO EXISTE
+FROM tab_questions
+WHERE tab_questions.libelle = question;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_questions(libelle) VALUES (question);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_recompense`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_recompense` (`_tournoi` INT, `_place` INT, `_libelle` VARCHAR(1000)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = 1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = 1452;
+
+INSERT INTO tab_recompenses VALUES (_tournoi, _place, _libelle);
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_ajout_reponse`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_reponse` (`reponse` VARCHAR(300)) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_reponses.id) INTO EXISTE
 FROM tab_reponses
@@ -195,74 +303,108 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_ajout_session_tournoi`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_session_tournoi` (`_tournoi` INT, `_date` DATE, `_heure_debut` TIME, `_nbplaces` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+IF DATEDIFF(_date, NOW() > 0) THEN
+	INSERT INTO tab_tournoi_session(tournoi, date, heure_debut, nbplaces) VALUES (_tournoi, _date, _heure_debut, _nbplaces);
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_changerAge`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerAge` (`age` INT, `mail` VARCHAR(100)) RETURNS INT  BEGIN
-    UPDATE `tab_utilisateurs` SET `age` = age WHERE `mail` = mail; 
-    RETURN (SELECT age FROM tab_utilisateurs WHERE `mail` = mail); 
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerAge` (`_age` INT, `_mail` VARCHAR(100)) RETURNS INT  BEGIN
+    UPDATE `tab_utilisateurs` SET `age` = _age WHERE `mail` = _mail; 
+    RETURN (SELECT age FROM tab_utilisateurs WHERE `mail` = _mail); 
 END$$
 
 DROP FUNCTION IF EXISTS `func_changerMail`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerMail` (`nouveaumail` VARCHAR(100), `mail` VARCHAR(100)) RETURNS INT  BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerMail` (`nouveaumail` VARCHAR(100), `_mail` VARCHAR(100)) RETURNS INT  BEGIN
 DECLARE retour INT;
+DECLARE existe INT;
 
-    SELECT COUNT(*) INTO retour
+    SELECT COUNT(*) INTO existe
     FROM tab_utilisateurs
     WHERE tab_utilisateurs.mail = nouveaumail;
     
-    IF retour > 0 THEN
-        SET retour = "-1";
+    IF existe > 0 THEN
+        SET retour = -1;
     ELSE
-    	UPDATE `tab_utilisateurs` SET `mail` = nouveaumail WHERE `mail` = mail; 
-        SET retour = (SELECT id FROM tab_utilisateurs WHERE `mail` = nouveaumail); 
+    	UPDATE tab_utilisateurs SET mail = nouveaumail WHERE mail = _mail;
+        SET retour = (SELECT id FROM tab_utilisateurs WHERE mail = nouveaumail); 
     END IF;
     
     RETURN retour;
 END$$
 
 DROP FUNCTION IF EXISTS `func_changerMdp`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerMdp` (`mdp` VARCHAR(255), `mail` VARCHAR(100)) RETURNS VARCHAR(255) CHARSET utf8mb4  BEGIN
-    UPDATE `tab_utilisateurs` SET `mdp` = mdp WHERE `mail` = mail; 
-    RETURN (SELECT `mdp` FROM tab_utilisateurs WHERE `mail` = mail); 
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerMdp` (`_mdp` VARCHAR(255), `_mail` VARCHAR(100)) RETURNS VARCHAR(255) CHARSET utf8mb4  BEGIN
+    UPDATE `tab_utilisateurs` SET `mdp` = _mdp WHERE `mail` = _mail; 
+    RETURN (SELECT `mdp` FROM tab_utilisateurs WHERE `mail` = _mail); 
 END$$
 
 DROP FUNCTION IF EXISTS `func_changerPseudo`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerPseudo` (`pseudo` VARCHAR(50), `mail` VARCHAR(100)) RETURNS INT  BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_changerPseudo` (`_pseudo` VARCHAR(50), `_mail` VARCHAR(100)) RETURNS INT  BEGIN
 DECLARE retour INT;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET retour  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET retour  = -1452;
 
     SELECT COUNT(*) INTO retour
     FROM tab_utilisateurs
-    WHERE tab_utilisateurs.pseudo = pseudo;
+    WHERE tab_utilisateurs.pseudo = _pseudo;
     
     IF retour > 0 THEN
         SET retour = "-1";
     ELSE
-    	UPDATE `tab_utilisateurs` SET `pseudo` = pseudo WHERE `mail` = mail; 
-        SET retour = (SELECT id FROM tab_utilisateurs WHERE `mail` = mail AND `pseudo` = pseudo); 
+    	UPDATE `tab_utilisateurs` SET `pseudo` = _pseudo WHERE `mail` = _mail; 
+        SET retour = (SELECT id FROM tab_utilisateurs WHERE `mail` = _mail AND `pseudo` = _pseudo); 
     END IF;
     
     RETURN retour;
 END$$
 
 DROP FUNCTION IF EXISTS `func_createUser`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_createUser` (`login` VARCHAR(50), `mail` VARCHAR(100), `age` INT, `mdp` VARCHAR(255)) RETURNS INT  BEGIN 
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_createUser` (`_login` VARCHAR(50), `_mail` VARCHAR(100), `_age` INT, `_mdp` VARCHAR(255)) RETURNS INT  BEGIN 
     DECLARE retour INT;
+    
+    DECLARE CONTINUE HANDLER FOR 1062
+	SET retour  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET retour  = -1452;
 
     SELECT COUNT(*) INTO retour
     FROM tab_utilisateurs
-    WHERE tab_utilisateurs.pseudo = login;
+    WHERE tab_utilisateurs.pseudo = _login;
     
     IF retour > 0 THEN
         SET retour = -1;
     ELSE
         SELECT COUNT(*) INTO retour
         FROM tab_utilisateurs
-        WHERE tab_utilisateurs.mail = mail;
+        WHERE tab_utilisateurs.mail = _mail;
         
         IF retour > 0 THEN
             SET retour = -2;
         ELSE
             INSERT INTO tab_utilisateurs (mail, pseudo, age, mdp)
-            VALUES (mail, login, age, mdp);
+            VALUES (_mail, _login, _age, _mdp);
             
             SET retour = LAST_INSERT_ID();
         END IF;
@@ -276,6 +418,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_jeu_ajout_categorie` (`jeu_id` 
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_categoriser.jeu) INTO EXISTE
 FROM tab_categoriser
@@ -299,6 +447,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_jeu_suppr_categorie` (`jeu_id` 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_categoriser.jeu) INTO EXISTE
 FROM tab_categoriser
 WHERE tab_categoriser.jeu = jeu_id
@@ -321,6 +475,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_categorie` (`libelle` VAR
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_categories.id) INTO EXISTE
 FROM tab_categories
 WHERE tab_categories.nom_categorie = libelle;
@@ -336,11 +496,45 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_classement`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_classement` (`_utilisateur` INT, `_tournoi` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+SELECT COUNT(tab_classement.tournoi) INTO EXISTE
+FROM tab_classement
+WHERE tab_classement.tournoi = _tournoi
+AND tab_classement.utilisateur = _utilisateur;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_classement WHERE tab_classement.utilisateur = _utilisateur AND tab_classement.tournoi = _tournoi;
+	SET RETOUR = 1;
+ELSE
+    SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_inscription`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_inscrire.utilisateur) INTO EXISTE
 FROM tab_inscrire
@@ -363,6 +557,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_jeu_plateforme` (`jeu_id`
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_platforme_jeu.id) INTO EXISTE
 FROM tab_platforme_jeu
 WHERE tab_platforme_jeu.jeu = jeu_id AND tab_platforme_jeu.plateforme = plateforme_id;
@@ -383,6 +583,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_plateforme` (`libelle` VA
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_plateformes.id) INTO EXISTE
 FROM tab_plateformes
@@ -405,6 +611,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_question` (`question` VAR
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_questions.id) INTO EXISTE
 FROM tab_questions
 WHERE tab_questions.libelle = question;
@@ -420,11 +632,46 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_recompense`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_recompense` (`_tournoi` INT, `_place` INT, `_libelle` VARCHAR(1000)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = 1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = 1452;
+    
+SELECT COUNT(tab_recompenses.libelle) INTO EXISTE
+FROM tab_recompenses
+WHERE tab_recompenses.tournoi = _tournoi
+AND tab_recompenses.place = _place
+AND tab_recompenses.libelle = _libelle;
+
+IF EXISTE <> 0 THEN
+	INSERT INTO tab_recompenses VALUES (_tournoi, _place, _libelle);
+    SET RETOUR = 1;
+ELSE
+	SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_reponse`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_reponse` (`reponse` VARCHAR(300)) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_reponses.id) INTO EXISTE
 FROM tab_reponses
@@ -441,11 +688,34 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_sesssion_tournoi`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_sesssion_tournoi` (`id_session` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+DELETE FROM tab_tournoi_session WHERE tab_tournoi_session.id = id_session;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_tournoi`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_tournoi` (`jeu_id` INT) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_tournois.id) INTO EXISTE
 FROM tab_tournois
@@ -468,6 +738,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_utilisateur` (`mail_user`
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_utilisateurs.id) INTO EXISTE
 FROM tab_utilisateurs
 WHERE tab_utilisateurs.mail = mail_user;
@@ -489,6 +765,12 @@ CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_vote_utilisateur` (`jeu_i
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE EXISTE INT DEFAULT 0;
 
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
 SELECT COUNT(tab_voter.utilisateur) INTO EXISTE
 FROM tab_voter
 WHERE tab_voter.utilisateur = util.id AND tab_voter.jeu = jeu_id;
@@ -505,10 +787,16 @@ RETURN RETOUR;
 END$$
 
 DROP FUNCTION IF EXISTS `func_voter`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_voter` (`utilisateur` INT, `jeuChoisi` INT) RETURNS INT  BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_voter` (`_utilisateur` INT, `_jeuChoisi` INT) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE nbJeu INT;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
 
 SELECT COUNT(tab_voter.jeu) INTO nbJeu
 FROM tab_voter
@@ -516,36 +804,15 @@ INNER JOIN tab_platforme_jeu ON tab_voter.jeu = tab_platforme_jeu.jeu
 WHERE tab_platforme_jeu.plateforme = 
 (SELECT tab_platforme_jeu.plateforme
 FROM tab_platforme_jeu 
-WHERE jeu = jeuChoisi)
-AND tab_voter.utilisateur = utilisateur;
+WHERE jeu = _jeuChoisi)
+AND tab_voter.utilisateur = _utilisateur;
 
 IF nbJeu <> 0 THEN
 	SET RETOUR = -1;
 ELSE
 	INSERT INTO tab_voter (utilisateur, jeu)
-    VALUES (utilisateur, jeuChoisi);
+    VALUES (_utilisateur, _jeuChoisi);
     
-    SET RETOUR = 1;
-END IF;
-
-RETURN RETOUR;
-
-END$$
-
-DROP FUNCTION IF EXISTS `tab_ajout_question`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `tab_ajout_question` (`question` VARCHAR(200)) RETURNS INT  BEGIN
-
-DECLARE RETOUR INT DEFAULT 0;
-DECLARE EXISTE INT DEFAULT 0;
-
-SELECT COUNT(tab_questions.id) INTO EXISTE
-FROM tab_questions
-WHERE tab_questions.libelle = question;
-
-IF EXISTE <> 0 THEN
-	SET RETOUR = -1;
-ELSE
-	INSERT INTO tab_questions(libelle) VALUES (question);
     SET RETOUR = 1;
 END IF;
 
@@ -834,14 +1101,14 @@ CREATE TABLE IF NOT EXISTS `tab_utilisateurs` (
   `mdp` varchar(255) NOT NULL,
   `admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `tab_utilisateurs`
 --
 
 INSERT INTO `tab_utilisateurs` (`id`, `mail`, `pseudo`, `age`, `mdp`, `admin`) VALUES
-(20, 'contact@rainbowyoshi.fr', 'Arthur', 15, '$2y$10$tfVT59CvQBn/AYmUYq.a.OEhYG3RQG4cLmAqbp2T.LzjDveBYH5Ny', 1);
+(24, 'admin@arthuraugis.fr', 'RainbowYoshi', 19, '$2y$10$ZkJnqqJuharZ1P6CNUXxgO6w8Nd.jggdh4CxdV4Bm65DwEASPCpwS', 1);
 
 -- --------------------------------------------------------
 
