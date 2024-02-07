@@ -87,6 +87,10 @@ body
     float: right;
 }
 
+.selected {
+    background: #7abaff;
+}
+
 .progress-bar
 {
     height: 35px;
@@ -113,9 +117,22 @@ body
     margin: 10px;
 }
 
+.quiz {
+    text-align: center;
+    margin: 100px;
+}
+
+.proposition {
+    width: calc(50% - 10px);
+}
+
+.question {
+    padding-top: 60px;
+}
+
 
 @media screen and (max-width: 950px) {
-    .corps {
+    .corps, .quiz {
         display: block;
         margin: 0 50px 0 50px;
     }
@@ -144,7 +161,7 @@ body
         transition: margin-top 0.3s ease-in-out;
     }
 
-    .corps {
+    .corps, .quiz {
         display: block;
         margin: 50px 50px 0 50px;
     }
@@ -180,6 +197,11 @@ body
     .show-navbar {
         cursor: pointer;
         width: 50px;
+    }
+
+    .proposition {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 /*

@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     //#region Test de timer en javascript
-    const targetDate = new Date('2023-12-19T15:56:00');
+    const targetDate = new Date('2024-12-19T15:56:00');
     let intervalTimer;
 
 function updateTimer()
