@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 06 fév. 2024 à 11:09
--- Version du serveur : 8.2.0
--- Version de PHP : 8.2.13
+-- Généré le : mer. 07 fév. 2024 à 16:20
+-- Version du serveur : 8.0.31
+-- Version de PHP : 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,6 +27,16 @@ DELIMITER $$
 --
 -- Procédures
 --
+DROP PROCEDURE IF EXISTS `proc_getquiz`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getquiz` ()   BEGIN
+
+SELECT tab_questions.libelle AS "Questions", tab_reponses.libelle AS "Reponses", tab_attribuer.bonnereponse AS "BonneReponse"
+FROM tab_attribuer
+INNER JOIN tab_questions ON tab_attribuer.question = tab_questions.id
+INNER JOIN tab_reponses ON tab_attribuer.reponse = tab_reponses.id;
+
+END$$
+
 DROP PROCEDURE IF EXISTS `proc_jeux_avec_tournois`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_jeux_avec_tournois` ()   BEGIN
 
@@ -39,9 +49,19 @@ END$$
 DROP PROCEDURE IF EXISTS `proc_jeux_sans_tournois`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_jeux_sans_tournois` ()   BEGIN
 
-SELECT tab_platforme_jeu.jeu
+SELECT tab_jeux.id AS "id_jeu", 
+tab_jeux.nom AS "nom_jeu",
+tab_jeux.description AS "description_jeu", 
+tab_jeux.url_image AS "image_jeu", 
+tab_jeux.pegi AS "pegi_jeu", 
+tab_categories.nom_categorie AS "categories_jeu", 
+tab_plateformes.nom AS "plateforme_jeu"
 FROM tab_platforme_jeu
 LEFT JOIN tab_tournois ON tab_platforme_jeu.id = tab_tournois.jeu
+LEFT JOIN tab_jeux ON tab_platforme_jeu.jeu = tab_jeux.id
+LEFT JOIN tab_categoriser ON tab_categoriser.jeu = tab_jeux.id
+LEFT JOIN tab_categories ON tab_categoriser.categorie = tab_categories.id
+LEFT JOIN tab_plateformes ON tab_platforme_jeu.plateforme = tab_plateformes.id
 WHERE tab_tournois.jeu IS NULL;
 
 END$$
@@ -123,6 +143,23 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_ajout_attribuer`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_attribuer` (`_question` INT, `_reponse` INT, `_bonnereponse` TINYINT(1)) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+    
+INSERT INTO tab_attribuer VALUES (_question, _reponse, _bonnereponse);
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_ajout_classement`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_classement` (`_utilisateur` INT, `_tournoi` INT, `_place` INT, `_eliminer` BOOLEAN) RETURNS INT  BEGIN
 
@@ -151,6 +188,34 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_ajout_evaluer`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_evaluer` (`_utilisateur` INT, `_tournoi` INT, `_note` INT, `_commentaire` TEXT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+    
+SELECT COUNT(tab_evaluer.utilisateur) INTO EXISTE
+FROM tab_evaluer
+WHERE tab_evaluer.utilisateur = _utilisateur
+AND tab_evaluer.tournoi = _tournoi;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT tab_evaluer VALUES (_utilisateur, _tournoi, _note, _commentaire);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_ajout_inscription`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
 
@@ -171,6 +236,33 @@ IF EXISTE <> 0 THEN
 	SET RETOUR = -1;
 ELSE
 	INSERT INTO tab_inscrire VALUES (utilisateur_id, tournoi_id);
+    SET RETOUR = 1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_jeux`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_jeux` (`_nom` VARCHAR(100), `_description` VARCHAR(1000), `_url_image` VARCHAR(200), `_pegi` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+    
+SELECT COUNT(tab_jeux.id) INTO EXISTE
+FROM tab_jeux
+WHERE tab_jeux.nom = _nom;
+
+IF EXISTE <> 0 THEN
+	SET RETOUR = -1;
+ELSE
+	INSERT INTO tab_jeux(nom, description, url_image, pegi) VALUES (_nom, _description, _url_image, _pegi);
     SET RETOUR = 1;
 END IF;
 
@@ -298,6 +390,23 @@ ELSE
 	INSERT INTO tab_reponses(libelle) VALUES (reponse);
     SET RETOUR = 1;
 END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_ajout_result_quiz`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_ajout_result_quiz` (`_utilisateur` INT, `_nbBonnesReponses` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 1;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+    
+INSERT INTO tab_result_quiz VALUES (_utilisateur, _nbBonnesReponses);
 
 RETURN RETOUR;
 
@@ -469,6 +578,34 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_attribuer`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_attribuer` (`_question` INT, `_reponse` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+SELECT COUNT(tab_attribuer.question) INTO EXISTE
+FROM tab_attribuer
+WHERE tab_attribuer.question = _question
+AND tab_attribuer.reponse = _reponse;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_attribuer WHERE tab_attribuer.question = _question AND tab_attribuer.reponse = _reponse;
+    SET RETOUR = 1;
+ELSE
+	SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_categorie`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_categorie` (`libelle` VARCHAR(50)) RETURNS INT  BEGIN
 
@@ -524,6 +661,34 @@ RETURN RETOUR;
 
 END$$
 
+DROP FUNCTION IF EXISTS `func_suppr_evaluer`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_evaluer` (`_utilisateur` INT, `_tournoi` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+
+SELECT COUNT(tab_evaluer.utilisateur) INTO EXISTE
+FROM tab_evaluer
+WHERE tab_evaluer.utilisateur = _utilisateur
+AND tab_evaluer.tournoi = _tournoi;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_evaluer WHERE tab_evaluer.utilisateur = _utilisateur AND tab_evaluer.tournoi = _tournoi;
+    SET RETOUR = 1;
+ELSE
+	SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
 DROP FUNCTION IF EXISTS `func_suppr_inscription`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_inscription` (`utilisateur_id` INT, `tournoi_id` INT) RETURNS INT  BEGIN
 
@@ -545,6 +710,33 @@ IF EXISTE <> 0 THEN
 	SET RETOUR = 1;
 ELSE
     SET RETOUR = -1;
+END IF;
+
+RETURN RETOUR;
+
+END$$
+
+DROP FUNCTION IF EXISTS `func_suppr_jeux`$$
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_suppr_jeux` (`_id` INT) RETURNS INT  BEGIN
+
+DECLARE RETOUR INT DEFAULT 0;
+DECLARE EXISTE INT DEFAULT 0;
+
+DECLARE CONTINUE HANDLER FOR 1062
+	SET RETOUR  = -1062;
+
+DECLARE CONTINUE HANDLER FOR 1452
+	SET RETOUR  = -1452;
+    
+SELECT COUNT(tab_jeux.id) INTO EXISTE
+FROM tab_jeux
+WHERE tab_jeux = _id;
+
+IF EXISTE <> 0 THEN
+	DELETE FROM tab_jeux WHERE tab_jeux.id = _id;
+    SET RETOUR = 1;
+ELSE
+	SET RETOUR = -1;
 END IF;
 
 RETURN RETOUR;
@@ -837,6 +1029,23 @@ CREATE TABLE IF NOT EXISTS `tab_attribuer` (
   KEY `ce_reponses_attribuer` (`reponse`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `tab_attribuer`
+--
+
+INSERT INTO `tab_attribuer` (`question`, `reponse`, `bonnereponse`) VALUES
+(1, 1, 1),
+(1, 2, 0),
+(1, 3, 0),
+(1, 4, 0),
+(2, 5, 0),
+(2, 7, 0),
+(2, 6, 0),
+(2, 8, 1),
+(3, 9, 1),
+(3, 10, 0),
+(3, 11, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -877,7 +1086,8 @@ CREATE TABLE IF NOT EXISTS `tab_categoriser` (
 --
 
 INSERT INTO `tab_categoriser` (`jeu`, `categorie`) VALUES
-(2, 3);
+(2, 3),
+(3, 4);
 
 -- --------------------------------------------------------
 
@@ -1006,7 +1216,16 @@ CREATE TABLE IF NOT EXISTS `tab_questions` (
   `id` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `tab_questions`
+--
+
+INSERT INTO `tab_questions` (`id`, `libelle`) VALUES
+(1, 'Qu\'est-ce que la vie ?'),
+(2, 'Comment craft une pioche en bois dans minecraft ?'),
+(3, 'La queue de Raph');
 
 -- --------------------------------------------------------
 
@@ -1033,7 +1252,24 @@ CREATE TABLE IF NOT EXISTS `tab_reponses` (
   `id` int NOT NULL AUTO_INCREMENT,
   `libelle` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `tab_reponses`
+--
+
+INSERT INTO `tab_reponses` (`id`, `libelle`) VALUES
+(1, '42'),
+(2, 'le fiak de raph'),
+(3, 'le PHP'),
+(4, 'Yoshi'),
+(5, '2 diamants et un baton'),
+(6, '3 buches de bois et 2 planches'),
+(7, '3 buches de bois et 2 batons'),
+(8, '3 planches de bois et 2 batons'),
+(9, 'Minuscule'),
+(10, 'Moyenne'),
+(11, 'Enorme');
 
 -- --------------------------------------------------------
 
@@ -1060,14 +1296,7 @@ CREATE TABLE IF NOT EXISTS `tab_tournois` (
   `jeu` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ce_jeux_tournois` (`jeu`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Déchargement des données de la table `tab_tournois`
---
-
-INSERT INTO `tab_tournois` (`id`, `jeu`) VALUES
-(4, 2);
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
