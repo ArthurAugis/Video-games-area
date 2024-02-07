@@ -58,7 +58,7 @@
             echo $validation->getError('inscrire_age');
             echo "</p>" . "<p>";
 
-            echo form_label('Mot de passe :') . "<br>";
+            echo form_label('Mot de passe (Minimum 12 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractères spécial) :') . "<br>";
 
             $data = array(
                 'name' => 'inscrire_mdp',

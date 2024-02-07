@@ -1,4 +1,7 @@
 <div class="corps">
+    <?php
+        var_dump($vote);
+    ?>
     <div class="gauche">
         <div class="tournoi">
             <h2>Smash Bros Ultimate <span class="pourcentage">35%</span></h2>

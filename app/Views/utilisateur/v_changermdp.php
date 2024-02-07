@@ -6,7 +6,7 @@
         echo form_open(base_url() . "public/utilisateur/changermdp");
 
         echo '<p>';
-        echo form_label('Changer ton mot de passe :') . "<br>";
+        echo form_label('Changer ton mot de passe (Minimum 12 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractères spécial) :') . "<br>";
 
         $data = array(
             'name' => 'changermdp_mdp',
