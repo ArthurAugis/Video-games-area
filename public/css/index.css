@@ -17,6 +17,49 @@ body
     text-align: center;
 }
 
+.vote {
+    text-align: center;
+    display: block;
+    padding-top: 75px;
+    margin: 0 50px 0 50px;
+}
+
+.vote-tournois {
+    position: fixed;
+    width: 40%;
+    height: 80%;
+    background: #3b3838;
+    left: 30%;
+    top: 10%;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.titre {text-align: center;}
+
+.vote-tournois > img {
+    width: 80%;
+}
+
+.carrousel {
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.carrousel > img {
+    padding: 10px;
+}
+
 .footer > h4
 {
     padding: 20px;
@@ -76,10 +119,22 @@ body
     margin-top: 0;
 }
 
+.tournois { display: none; }
+
 .tournoi {
     width: 80%;
     align-items: center;
-    display: none;
+    margin-left: 10%;
+}
+
+.tournois > h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.plateformes-div {
+    width: 50%;
+    margin-left: 25%;
 }
 
 .pourcentage
@@ -108,13 +163,23 @@ body
 
 .timer
 {
-    display: none;
     text-align: center;
 }
 
-.timer > div
+.timer-div
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.timer-div > div
 {
     margin: 10px;
+}
+
+.vote-img {
+    width: 300px;
 }
 
 .quiz {
@@ -129,7 +194,6 @@ body
 .question {
     padding-top: 60px;
 }
-
 
 @media screen and (max-width: 950px) {
     .corps, .quiz {

@@ -26,7 +26,7 @@ function updateTimer()
 {
     const now = new Date().getTime();
     const difference = targetDate - now;
-    const tournois = document.querySelectorAll('.tournoi');
+    const tournois = document.querySelector('.tournois');
 
     if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -40,19 +40,20 @@ function updateTimer()
         document.querySelector('.seconds').innerText = ('0' + seconds).slice(-2);
     } else {
         clearInterval(intervalTimer);
-        document.querySelector('.timer').style.display = 'none';
-        document.querySelector('.formvote').style.display = 'none';
-        document.querySelector('.plateformes').style.display = 'none';
+        if(document.querySelector('.vote')) {
+            document.querySelector('.vote').style.display = 'none';
+        }
+        if(document.querySelector('.timer')){
+            document.querySelector('.timer').style.display = 'none';
+        }
 
-        tournois.forEach(tournoi => {
-            tournoi.style.display = 'block';
-            });
+        if(tournois) {
+            tournois.style.display = 'block';
+        }
     }
 }
 
-if (document.querySelector('.timer')) {
-    intervalTimer = setInterval(updateTimer, 1000);
-    updateTimer();
-}
+intervalTimer = setInterval(updateTimer, 1000);
+updateTimer();
 //#endregion
 });
