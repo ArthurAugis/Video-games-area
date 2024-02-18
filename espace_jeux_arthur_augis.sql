@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 07 fév. 2024 à 16:20
+-- Généré le : dim. 18 fév. 2024 à 22:51
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -27,6 +27,28 @@ DELIMITER $$
 --
 -- Procédures
 --
+DROP PROCEDURE IF EXISTS `proc_getDefaultPlatform`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getDefaultPlatform` ()   BEGIN
+
+SELECT tab_plateformes.nom FROM tab_plateformes LIMIT 1;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `proc_getPlateformes`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getPlateformes` ()   BEGIN
+
+SELECT tab_plateformes.id, tab_plateformes.nom 
+FROM tab_plateformes;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `proc_getPlatform`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getPlatform` (IN `_nom` VARCHAR(50))   BEGIN
+
+SELECT tab_plateformes.nom FROM tab_plateformes WHERE tab_plateformes.nom = _nom LIMIT 1;
+
+END$$
+
 DROP PROCEDURE IF EXISTS `proc_getquiz`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getquiz` ()   BEGIN
 
@@ -34,6 +56,18 @@ SELECT tab_questions.libelle AS "Questions", tab_reponses.libelle AS "Reponses",
 FROM tab_attribuer
 INNER JOIN tab_questions ON tab_attribuer.question = tab_questions.id
 INNER JOIN tab_reponses ON tab_attribuer.reponse = tab_reponses.id;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `proc_getVotesUtilisateur`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_getVotesUtilisateur` (IN `_login` VARCHAR(50))   BEGIN
+
+SELECT tab_plateformes.nom
+FROM tab_voter
+INNER JOIN tab_platforme_jeu ON tab_platforme_jeu.id = tab_voter.jeu
+INNER JOIN tab_plateformes ON tab_plateformes.id = tab_platforme_jeu.plateforme
+INNER JOIN tab_utilisateurs ON tab_utilisateurs.id = tab_voter.utilisateur
+WHERE tab_utilisateurs.pseudo = _login;
 
 END$$
 
@@ -47,9 +81,9 @@ INNER JOIN tab_tournois ON tab_platforme_jeu.id = tab_tournois.jeu;
 END$$
 
 DROP PROCEDURE IF EXISTS `proc_jeux_sans_tournois`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_jeux_sans_tournois` ()   BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_jeux_sans_tournois` (IN `_plateforme` VARCHAR(50))   BEGIN
 
-SELECT tab_jeux.id AS "id_jeu", 
+SELECT tab_platforme_jeu.id AS "id_jeu", 
 tab_jeux.nom AS "nom_jeu",
 tab_jeux.description AS "description_jeu", 
 tab_jeux.url_image AS "image_jeu", 
@@ -62,7 +96,29 @@ LEFT JOIN tab_jeux ON tab_platforme_jeu.jeu = tab_jeux.id
 LEFT JOIN tab_categoriser ON tab_categoriser.jeu = tab_jeux.id
 LEFT JOIN tab_categories ON tab_categoriser.categorie = tab_categories.id
 LEFT JOIN tab_plateformes ON tab_platforme_jeu.plateforme = tab_plateformes.id
-WHERE tab_tournois.jeu IS NULL;
+WHERE tab_tournois.jeu IS NULL
+AND tab_plateformes.nom = _plateforme;
+
+END$$
+
+DROP PROCEDURE IF EXISTS `proc_jeux_sans_tournois_default`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_jeux_sans_tournois_default` ()   BEGIN
+
+SELECT tab_platforme_jeu.id AS "id_jeu", 
+tab_jeux.nom AS "nom_jeu",
+tab_jeux.description AS "description_jeu", 
+tab_jeux.url_image AS "image_jeu", 
+tab_jeux.pegi AS "pegi_jeu", 
+tab_categories.nom_categorie AS "categories_jeu", 
+tab_plateformes.nom AS "plateforme_jeu"
+FROM tab_platforme_jeu
+LEFT JOIN tab_tournois ON tab_platforme_jeu.id = tab_tournois.jeu
+LEFT JOIN tab_jeux ON tab_platforme_jeu.jeu = tab_jeux.id
+LEFT JOIN tab_categoriser ON tab_categoriser.jeu = tab_jeux.id
+LEFT JOIN tab_categories ON tab_categoriser.categorie = tab_categories.id
+LEFT JOIN tab_plateformes ON tab_platforme_jeu.plateforme = tab_plateformes.id
+WHERE tab_tournois.jeu IS NULL
+AND tab_plateformes.id = (SELECT tab_plateformes.id FROM tab_plateformes ORDER BY tab_plateformes.id LIMIT 1);
 
 END$$
 
@@ -74,15 +130,22 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_login` (IN `mail` VARCHAR(100)
 END$$
 
 DROP PROCEDURE IF EXISTS `proc_pourcent_vote`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_pourcent_vote` ()   BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_pourcent_vote` (IN `_plateforme` VARCHAR(50))   BEGIN
+    DECLARE total_votes INT;
+    DECLARE platform_id INT;
 
-SELECT jeu, 
-ROUND(
-(COUNT(utilisateur) * 100.0 / 
-(SELECT COUNT(*) FROM tab_voter)), 0) as pourcentage
-FROM tab_voter
-GROUP BY jeu;
+    SELECT id INTO platform_id FROM tab_plateformes WHERE nom = _plateforme;
 
+    SELECT COUNT(*) INTO total_votes FROM tab_voter
+    INNER JOIN tab_platforme_jeu ON tab_voter.jeu = tab_platforme_jeu.id
+    WHERE tab_platforme_jeu.plateforme = platform_id;
+
+    SELECT tab_platforme_jeu.id,
+           ROUND(COUNT(utilisateur) * 100.0 / total_votes, 0) AS pourcentage
+    FROM tab_platforme_jeu
+    LEFT JOIN tab_voter ON tab_voter.jeu = tab_platforme_jeu.id
+    WHERE tab_platforme_jeu.plateforme = platform_id
+    GROUP BY tab_platforme_jeu.id;
 
 END$$
 
@@ -979,10 +1042,11 @@ RETURN RETOUR;
 END$$
 
 DROP FUNCTION IF EXISTS `func_voter`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `func_voter` (`_utilisateur` INT, `_jeuChoisi` INT) RETURNS INT  BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `func_voter` (`_utilisateur` VARCHAR(50), `_jeuChoisi` INT) RETURNS INT  BEGIN
 
 DECLARE RETOUR INT DEFAULT 0;
 DECLARE nbJeu INT;
+DECLARE idUtilisateur VARCHAR(50);
 
 DECLARE CONTINUE HANDLER FOR 1062
 	SET RETOUR  = -1062;
@@ -992,18 +1056,24 @@ DECLARE CONTINUE HANDLER FOR 1452
 
 SELECT COUNT(tab_voter.jeu) INTO nbJeu
 FROM tab_voter
-INNER JOIN tab_platforme_jeu ON tab_voter.jeu = tab_platforme_jeu.jeu
+INNER JOIN tab_platforme_jeu ON tab_voter.jeu = tab_platforme_jeu.id
+INNER JOIN tab_utilisateurs ON tab_utilisateurs.id = tab_voter.utilisateur
 WHERE tab_platforme_jeu.plateforme = 
 (SELECT tab_platforme_jeu.plateforme
 FROM tab_platforme_jeu 
-WHERE jeu = _jeuChoisi)
-AND tab_voter.utilisateur = _utilisateur;
+WHERE id = _jeuChoisi)
+AND tab_utilisateurs.pseudo = _utilisateur;
 
 IF nbJeu <> 0 THEN
 	SET RETOUR = -1;
 ELSE
+	
+    SELECT tab_utilisateurs.id INTO idUtilisateur
+    FROM tab_utilisateurs
+    WHERE tab_utilisateurs.pseudo = _utilisateur;
+    
 	INSERT INTO tab_voter (utilisateur, jeu)
-    VALUES (_utilisateur, _jeuChoisi);
+    VALUES (idUtilisateur, _jeuChoisi);
     
     SET RETOUR = 1;
 END IF;
@@ -1087,7 +1157,8 @@ CREATE TABLE IF NOT EXISTS `tab_categoriser` (
 
 INSERT INTO `tab_categoriser` (`jeu`, `categorie`) VALUES
 (2, 3),
-(3, 4);
+(3, 4),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -1149,7 +1220,7 @@ CREATE TABLE IF NOT EXISTS `tab_jeux` (
   `url_image` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `pegi` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `tab_jeux`
@@ -1157,7 +1228,11 @@ CREATE TABLE IF NOT EXISTS `tab_jeux` (
 
 INSERT INTO `tab_jeux` (`id`, `nom`, `description`, `url_image`, `pegi`) VALUES
 (2, 'Smash bros ultimate', 'Jeu smash bros ultimate', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9', 18),
-(3, 'My little pony', 'My little pony', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000044000/c231f02fb967bdfeacb1e338245fa53254fe1072850641d131ed12c5ce1dd751', 3);
+(3, 'My little pony', 'My little pony', 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000044000/c231f02fb967bdfeacb1e338245fa53254fe1072850641d131ed12c5ce1dd751', 3),
+(4, 'Sims', 'Sims', 'https://cdn-uploads.gameblog.fr/img/news/452020_64e74c23d1566.jpg', 18),
+(5, 'Cyberpunk', 'Cyberpunk', 'https://www.cyberpunk.net/build/images/pre-order/buy-b/keyart-ue-fr@2x-cd66fd0d.jpg', 18),
+(6, 'Destiny 2', 'Destiny 2', 'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2_Bungie_S1_2560x1440-d91ec3c799ec514732341a13ba0c030c?h=270&quality=medium&resize=1&w=480', 18),
+(7, 'Hogwarts Legacy', 'Hogwarts Legacy', 'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_HogwartsLegacy.jpg', 18);
 
 -- --------------------------------------------------------
 
@@ -1195,7 +1270,7 @@ CREATE TABLE IF NOT EXISTS `tab_platforme_jeu` (
   PRIMARY KEY (`id`),
   KEY `ce_jeu_pljeu` (`jeu`),
   KEY `ce_platforme_pljeu` (`plateforme`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `tab_platforme_jeu`
@@ -1203,7 +1278,12 @@ CREATE TABLE IF NOT EXISTS `tab_platforme_jeu` (
 
 INSERT INTO `tab_platforme_jeu` (`id`, `jeu`, `plateforme`) VALUES
 (1, 2, 6),
-(2, 3, 6);
+(2, 3, 6),
+(3, 4, 6),
+(4, 5, 6),
+(5, 6, 6),
+(6, 7, 6),
+(7, 7, 7);
 
 -- --------------------------------------------------------
 
@@ -1296,7 +1376,7 @@ CREATE TABLE IF NOT EXISTS `tab_tournois` (
   `jeu` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ce_jeux_tournois` (`jeu`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -1353,6 +1433,13 @@ CREATE TABLE IF NOT EXISTS `tab_voter` (
   KEY `ce_util_voter` (`utilisateur`),
   KEY `ce_jeux_voter` (`jeu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `tab_voter`
+--
+
+INSERT INTO `tab_voter` (`utilisateur`, `jeu`, `dateEtHeure`) VALUES
+(24, 1, '2024-02-17 21:29:57');
 
 --
 -- Contraintes pour les tables déchargées
