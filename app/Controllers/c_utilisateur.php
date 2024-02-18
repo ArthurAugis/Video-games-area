@@ -151,10 +151,9 @@ class c_utilisateur extends BaseController
                             $session->set('age', $user->age);
                             $session->set('login', $user->pseudo);
                             $session->set('admin', $user->admin);
-                            $info['titre'] = '';
-                            $info['validation'] = $this->validator;
 
-                            return view('v_header') . view('utilisateur/v_utilisateur', $info) . view('v_footer');
+                            header("Location: " . base_url() . 'public/utilisateur');
+                            exit;
                         } else {
                             // Mot de passe incorrect
                             $info['titre'] = 'Email ou mot de passe invalide';
@@ -199,9 +198,8 @@ class c_utilisateur extends BaseController
         $session->remove('admin');
         $session->destroy();
 
-        return view('v_header')
-            . view('utilisateur/v_utilisateur', ['validation' => $validation,'titre' => ""])
-            . view('v_footer');
+        header("Location: " . base_url() . 'public/utilisateur');
+        exit;
     }
 
     /**

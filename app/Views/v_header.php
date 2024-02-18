@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <?= link_tag("/public/fontawesome/css/all.css") ?>
-    <?= link_tag("/public/css/index.css") ?>
+    <?= script_tag("https://code.jquery.com/jquery-3.6.0.min.js"); ?>
+    <?= link_tag("/public/fontawesome/css/all.css"); ?>
+    <?= link_tag("/public/css/index.css"); ?>
     <title>Espace de jeux vidéo</title>
 </head>
 <body>
