@@ -1,7 +1,8 @@
 <?php
+// met tout le quiz en format json
 $quiz_json = json_encode($quiz);
 ?>
-<div class="quiz">
+<div class="corps quiz">
     <h2 class="question">Commencer le quiz ?</h2>
     <div class="propositions">
     </div>
@@ -10,11 +11,47 @@ $quiz_json = json_encode($quiz);
     echo form_button($valider_btn);
     ?>
 </div>
+<div class="resultat">
+    <h1>Tu as fini le quiz !</h1>
+    <h3>Tu as eu X bonnes réponses</h3>
+    <?php
+    $session = \Config\Services::session();
+    if (session()->get('login')) {
+        echo form_open(base_url() . "public/scoreboardQuiz");
+
+        $data = array(
+            'name' => 'score-input',
+            'id' => 'score-input',
+            'type' => 'hidden',
+        );
+
+        echo form_input($data);
+
+        $data = array(
+            'name' => 'submit',
+            'id' => 'submit',
+            'content' => 'Enregistrer mon score',
+            'type' => 'submit',
+            'class' => 'enregistrer_btn'
+        );
+
+        echo form_button($data);
+        echo "</p>";
+
+        echo form_close();
+    }
+
+    echo anchor(base_url('public/'), "<button class='return_accueil_btn'>Retourner à l'accueil</button>")
+    ?>
+</div>
 <script>
+
+    // recupere tout le quiz
     var quiz = <?php echo $quiz_json; ?>;
     var questionsObj = {};
 
-    quiz.forEach(function(question) {
+    // met toutes les questions/réponses dans un tableau
+    quiz.forEach(function (question) {
         if (questionsObj.hasOwnProperty(question.Questions)) {
             questionsObj[question.Questions][1].push([question.Reponses, question.BonneReponse]);
         } else {
@@ -27,38 +64,57 @@ $quiz_json = json_encode($quiz);
     var score = 0;
 
     function afficherQuestion() {
+
+        // vérifie si il y a encore des questions
         if (tableau_questions.length > 0) {
+            //récupére une question aléatoire
             var random = Math.floor(Math.random() * tableau_questions.length);
             var question = tableau_questions.splice(random, 1)[0];
             $(".question").text(question[0]);
             $(".propositions").empty();
 
-            question[1].forEach(function(reponse) {
+            // récupére les réponses et les bonnes réponses
+            question[1].forEach(function (reponse) {
                 var propositionBtn = $("<button></button>")
                     .addClass("proposition")
                     .text(reponse[0])
                     .data("bonneReponse", reponse[1])
-                    .click(function() {
+                    .click(function () {
                         $(this).toggleClass("selected");
                     })
                     .appendTo(".propositions");
             });
 
+            // affiche le score si il n'y a plus de questions
         } else {
-            alert("Fin du quiz !");
+            document.querySelector('.quiz').style.display = "none";
+            document.querySelector('.resultat').style.display = "block";
+            document.querySelector('.resultat').querySelector('h3').innerText = "Tu as eu " + score +
+                " bonnes réponses";
+            document.querySelector('#score-input').value = score;
         }
     }
 
-    $(".valider_btn").click(function(event) {
+    $(".valider_btn").click(function (event) {
         var reponseButtons = $(".propositions .proposition");
-        reponseButtons.each(function() {
+        var scoretempo = -1;
+        reponseButtons.each(function () {
+            // vérifie si la réponse selectionné est bonne
             var isCorrect = parseInt($(this).data("bonneReponse"));
             if ($(this).hasClass("selected")) {
-                if (isCorrect === 1) {
-                    score++;
+                if (isCorrect === 1 && scoretempo === -1) {
+                    scoretempo = 1;
+                }
+
+                if(isCorrect !== 1)
+                {
+                    scoretempo = 0;
                 }
             }
         });
+
+        if(scoretempo === 1){ score++; }
+
         afficherQuestion();
     });
 

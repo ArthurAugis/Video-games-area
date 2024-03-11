@@ -1,7 +1,8 @@
-<div class="corps block">
+<div class="corps settings">
     <h2><?= $titre; ?></h2>
     <?php
     $session = \Config\Services::session();
+    // vérifie qu'il y a bien un age de stocké dans la session
     if (session()->get('age') || session()->get('age') == 0) {
         echo form_open(base_url() . "public/utilisateur/changerage");
 

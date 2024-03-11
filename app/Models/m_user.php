@@ -38,7 +38,7 @@ class m_user extends Model
             } else {
                 return 'Erreur lors de l\'exécution de la requête';
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 
@@ -79,7 +79,7 @@ class m_user extends Model
             } else {
                 return -1;
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 
@@ -112,7 +112,7 @@ class m_user extends Model
             } else {
                 return 'Erreur lors de l\'exécution de la requête';
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 
@@ -145,7 +145,7 @@ class m_user extends Model
             } else {
                 return 'Erreur lors de l\'exécution de la requête';
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 
@@ -178,7 +178,7 @@ class m_user extends Model
             } else {
                 return 'Erreur lors de l\'exécution de la requête';
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 
@@ -211,7 +211,37 @@ class m_user extends Model
             } else {
                 return 'Erreur lors de l\'exécution de la requête';
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
+            $errorCode = $e->getCode();
+            $errorMessage = $e->getMessage();
+
+            return "Erreur : $errorCode - Message : $errorMessage";
+        }
+    }
+
+    /**
+     * @param $login
+     * @return string
+     * Méthode pour supprimer un utilisateur à partir de son pseudo
+     */
+    function supprUser($login)
+    {
+        try {
+            $db = db_connect();
+
+            $stmt1 = "SET @p0 = ?";
+
+            $db->query($stmt1, [$login]);
+
+            $query = "SELECT `func_suppr_utilisateur`(@p0) AS `func_suppr_utilisateur`";
+            $result = $db->query($query);
+
+            if ($result) {
+                return $result->getResult()[0]->func_suppr_utilisateur;
+            } else {
+                return 'Erreur lors de l\'exécution de la requête';
+            }
+        } catch (mysqli_sql_exception $e) {
             $errorCode = $e->getCode();
             $errorMessage = $e->getMessage();
 

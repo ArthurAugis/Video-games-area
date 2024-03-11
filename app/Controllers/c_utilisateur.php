@@ -14,87 +14,111 @@ class c_utilisateur extends BaseController
      */
     public function index()
     {
+        $session = Services::session();
+
+        // vérifie si l'utilisateur est connecté
+        if (!session()->get('mail') && !session()->get('mdp')) {
+            return redirect()->to(base_url("public/utilisateur/inscription"));
+        } else {
+            return view('v_header')
+                . view('utilisateur/v_utilisateur')
+                . view('v_footer');
+        }
+    }
+
+    /**
+     * @return string|void
+     * Méthode pour gérer la page d'inscription
+     */
+    public function inscription()
+    {
         $validation = Services::validation();
 
         // vérifie si il y a eu une méthode post
-        if ($this->request->getMethod() === 'post') {
-            // vérifie si il y a eu un submit pour l'inscription
-            if ($this->request->getPost('submit_form_inscription') !== null) {
-                // création des règles/codes d'erreurs
-                $rules = ['inscrire_mail' => 'required|valid_email'
-                    , 'inscrire_login' => 'required|min_length[6]'
-                    , 'inscrire_age' => 'required|greater_than_equal_to[0]'
-                    ,'inscrire_mdp' => 'password'
-                    ,'inscrire_confirme_mdp' => 'password|matches[inscrire_mdp]'
-                    , 'inscrire_conditions' => 'required'];
+        if ($this->request->getPost('submit_form_inscription') !== null) {
+            // création des règles/codes d'erreurs
+            $rules = ['inscrire_mail' => 'required|valid_email'
+                , 'inscrire_login' => 'required|min_length[6]'
+                , 'inscrire_age' => 'required|greater_than_equal_to[0]'
+                ,'inscrire_mdp' => 'password'
+                ,'inscrire_confirme_mdp' => 'password|matches[inscrire_mdp]'
+                , 'inscrire_conditions' => 'required'];
 
-                $errors = [
-                    'inscrire_mail' => [
-                        'required' => 'Le champ adresse mail est obligatoire.',
-                        'valid_email' => "Ton mail n'est pas correct."
-                    ],
-                    'inscrire_login' => [
-                        'required' => 'Le champ login est obligatoire.',
-                        'min_length' => 'Ton pseudo doit faire au moins 6 caractères.'
-                    ],
-                    'inscrire_age' => [
-                        'required' => 'Le champ âge est obligatoire.',
-                        'greater_than_equal_to' => 'Ton âge doit au moins être de 0.'
-                    ],
-                    'inscrire_confirme_mdp' => [
-                        'matches' => 'Ce champ doit être identique à ton mot de passe.'
-                    ],
-                    'inscrire_conditions' => [
-                        'required' => 'Vous devez accepter les conditions.',
-                    ],
-                ];
+            $errors = [
+                'inscrire_mail' => [
+                    'required' => 'Le champ adresse mail est obligatoire.',
+                    'valid_email' => "Ton mail n'est pas correct."
+                ],
+                'inscrire_login' => [
+                    'required' => 'Le champ login est obligatoire.',
+                    'min_length' => 'Ton pseudo doit faire au moins 6 caractères.'
+                ],
+                'inscrire_age' => [
+                    'required' => 'Le champ âge est obligatoire.',
+                    'greater_than_equal_to' => 'Ton âge doit au moins être de 0.'
+                ],
+                'inscrire_confirme_mdp' => [
+                    'matches' => 'Ce champ doit être identique à ton mot de passe.'
+                ],
+                'inscrire_conditions' => [
+                    'required' => 'Vous devez accepter les conditions.',
+                ],
+            ];
 
-                $validation->setRules($rules, $errors);
+            $validation->setRules($rules, $errors);
 
-                if ($this->validate($rules, $errors)) {
-                    $session = Services::session();
+            if ($this->validate($rules, $errors)) {
+                $session = Services::session();
 
-                    // stocke les différentes informations utilisateurs
-                    $inscrire_mail = $this->request->getPost('inscrire_mail');
-                    $inscrire_login = $this->request->getPost('inscrire_login');
-                    $inscrire_age = $this->request->getPost('inscrire_age');
-                    $inscrire_mdp = $this->request->getPost('inscrire_mdp');
+                // stocke les différentes informations utilisateurs
+                $inscrire_mail = $this->request->getPost('inscrire_mail');
+                $inscrire_login = $this->request->getPost('inscrire_login');
+                $inscrire_age = $this->request->getPost('inscrire_age');
+                $inscrire_mdp = $this->request->getPost('inscrire_mdp');
 
-                    // hash du mdp
-                    $inscrire_hashPwd = password_hash($inscrire_mdp, PASSWORD_DEFAULT);
+                // hash du mdp
+                $inscrire_hashPwd = password_hash($inscrire_mdp, PASSWORD_DEFAULT);
 
-                    $model = new m_user();
+                $model = new m_user();
 
-                    // utilise la méthode createUser du modèle m_user
-                    $insert = $model->createUser($inscrire_login, $inscrire_mail, $inscrire_age, $inscrire_hashPwd);
+                // utilise la méthode createUser du modèle m_user
+                $insert = $model->createUser($inscrire_login, $inscrire_mail, $inscrire_age, $inscrire_hashPwd);
 
-                    if ($insert === '-1') {
-                        // indique que le pseudo est déjà utilisé
-                        $info['titre'] = "Pseudo déjà utilisé !";
-                    } elseif ($insert === '-2') {
-                        // indique que le mail est déjà utilisé
-                        $info['titre'] = "Mail déjà utilisé !";
-                    } else {
-                        // inscription réussie
-                        $session->set('mail', $inscrire_mail);
-                        $session->set('mdp', $inscrire_hashPwd);
-                        $session->set('age', $inscrire_age);
-                        $session->set('login', $inscrire_login);
-                        $session->set('admin', 0);
-                        $info['titre'] = '';
-                    }
+                if ($insert === '-1') {
+                    // indique que le pseudo est déjà utilisé
+                    $info['titre'] = "Pseudo déjà utilisé !";
+                    $info['validation'] = $this->validator;
+                    return view('v_header')
+                        . view('utilisateur/v_inscription', $info)
+                        . view('v_footer');
+                } elseif ($insert === '-2') {
+                    // indique que le mail est déjà utilisé
+                    $info['titre'] = "Mail déjà utilisé !";
+                    $info['validation'] = $this->validator;
+                    return view('v_header')
+                        . view('utilisateur/v_inscription', $info)
+                        . view('v_footer');
                 } else {
-                    // ne respecte pas les conditions
-                    $info['titre'] = "Inscription impossible, Corrige ta saisie";
+                    // inscription réussie
+                    $session->set('mail', $inscrire_mail);
+                    $session->set('mdp', $inscrire_hashPwd);
+                    $session->set('age', $inscrire_age);
+                    $session->set('login', $inscrire_login);
+                    $session->set('admin', 0);
+                    $info['titre'] = '';
+                    return redirect()->to(base_url("public/utilisateur"));
                 }
+            } else {
+                // ne respecte pas les conditions
+                $info['titre'] = "Inscription impossible, Corrige ta saisie";
                 $info['validation'] = $this->validator;
                 return view('v_header')
-                    . view('utilisateur/v_utilisateur', $info)
+                    . view('utilisateur/v_inscription', $info)
                     . view('v_footer');
             }
         } else {
             return view('v_header')
-                . view('utilisateur/v_utilisateur', ['validation' => $validation, 'titre' => ""])
+                . view('utilisateur/v_inscription', ['validation' => $validation, 'titre' => ""])
                 . view('v_footer');
         }
     }
@@ -454,5 +478,33 @@ class c_utilisateur extends BaseController
                 . view('utilisateur/v_changermdp', ['validation' => $validation, 'titre' => ""])
                 . view('v_footer');
         }
+    }
+
+    public function supprimer()
+    {
+        $session = Services::session();
+        $validation = Services::validation();
+
+        $rules = [];
+
+        $errors = [];
+
+        $validation->setRules($rules, $errors);
+
+        if (session()->get('login')) {
+            $model = new m_user();
+            $model->supprUser(session()->get('login'));
+
+            // supprime les identifiants de l'utilisateur
+            $session->remove('mail');
+            $session->remove('mdp');
+            $session->remove('age');
+            $session->remove('login');
+            $session->remove('admin');
+            $session->destroy();
+        }
+
+        header("Location: " . base_url() . 'public/utilisateur');
+        exit;
     }
 }

@@ -1,4 +1,4 @@
-<div class="corps">
+<div class="corps flex">
     <div class="gauche">
         <h2><?= $titre; ?></h2>
         <?php
@@ -31,10 +31,18 @@
                     'name' => 'connexion_mdp',
                     'id' => 'connexion_mdp',
                     'value' => set_value('connexion_mdp'),
-                    'placeholder' => 'Mot de passe'
+                    'placeholder' => 'Mot de passe',
+                    'class' => 'mdp'
                 );
 
                 echo form_password($data);
+                $data = array(
+                    'name' => 'submit_form_inscription',
+                    'content' => '<i class="fa-solid fa-eye"></i>',
+                    'class' => 'viewpassword'
+                );
+
+                echo form_button($data);
                 echo "</p>" . "<p>";
                 echo $validation->getError('connexion_mdp');
                 echo "</p>" . "<p>";
@@ -51,7 +59,7 @@
                 echo form_close();
                 ?>
 
-                <p>Pas encore de compte ? <?=anchor(base_url() . 'public/utilisateur', "Inscrit toi");?></p>
+                <p>Pas encore de compte ? <?=anchor(base_url() . 'public/utilisateur', "Inscrit toi", array('class' => 'redirect'));?></p>
             </div>
     </div>
     <div class="droite">
@@ -60,7 +68,7 @@
             [
                 'src' => '/public/img/link_inscription.jpg',
                 'alt' => "Link qui s'enregistre",
-                'class' => 'register-img'
+                'class' => 'image'
             ];
 
         echo img($proprieteImage);
