@@ -1,0 +1,44 @@
+.progress-bar
+{
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    background: #ffffff;
+    margin-top: 30px;
+}
+
+.progression {
+    background: #25C7D1;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.timer
+{
+    text-align: center;
+}
+
+.timer-div
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.timer-div > div
+{
+    margin: 10px;
+}
+
+.pourcentage
+{
+    float: right;
+}
+
+.tournoi {
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.tournois { display: none; }

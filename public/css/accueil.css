@@ -1,0 +1,50 @@
+.avis {
+    margin-top: 100px;
+}
+
+.note_commentaire {
+    float: right;
+}
+
+.commentaire {
+    width: 80%;
+    margin-left: 10%;
+    background: #383838;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.commentaire > h3,
+.commentaire > h4,
+.commentaire > p {
+    padding: 0 20px;
+}
+
+.commentaire > h3 {
+    margin-bottom: -13px;
+}
+
+.ajout-commentaire > h3 {
+    text-align: center;
+}
+
+.ajout-commentaire {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.ajout-commentaire > form > p > textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+}
+
+.ajout-commentaire > form > p > input {
+    width: 90px;
+}
+
+#suppr_comment_btn {
+    margin-left: 13px;
+    background: #b40c0c;
+}

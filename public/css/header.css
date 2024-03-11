@@ -1,0 +1,104 @@
+.navbar {
+    background: #383838;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+}
+
+.navbar > .left > ul > li > a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 15px;
+}
+
+.navbar > .right > ul > li > a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar > .right > ul > li > a:hover {
+    color: #0479ff;
+}
+
+.navbar > .left > ul > li > a::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    bottom: 8px;
+    left: 0;
+    background-color: #25C7D1;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar > .left > ul > li > a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.switch-navbar
+{
+    display: none;
+}
+
+.image {
+    width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        margin-top: -100vh;
+        transition: margin-top 0.3s ease-in-out;
+    }
+
+    .switch-navbar {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+        background: #383838;
+        text-align: center;
+        display: block;
+    }
+
+    .switch-navbar > ul {
+        height: 48px;
+    }
+
+    ul {
+        display: block;
+        margin: -23px -10px -10px;
+        font-size: 18px;
+    }
+
+    li {
+        margin: 20px;
+    }
+
+    .left > ul > li {
+        margin-top: 20%;
+    }
+
+    .show-navbar {
+        cursor: pointer;
+        width: 50px;
+    }
+}

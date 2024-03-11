@@ -1,0 +1,9 @@
+.interface {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.interface-item {
+    margin: 30px;
+}

@@ -1,6 +1,18 @@
-@import 'navbar.css';
-@import "form.css";
+/* Import des autres fichiers CSS */
+@import "header.css";
+@import "footer.css";
+@import "accueil.css";
+@import "prix.css";
+@import "quiz.css";
+@import "scoreboard.css";
+@import "tournois.css";
+@import "vote.css";
+@import "utilisateur.css";
+@import "connexion.css";
+@import "settings.css";
+@import "admin.css";
 
+/* CSS utiliser dans plusieurs view */
 body
 {
     background: #262424;
@@ -9,84 +21,16 @@ body
     color: white;
 }
 
-
-.footer
-{
-    margin-top: 100px;
-    background: #383838;
-    text-align: center;
-}
-
-.vote {
-    text-align: center;
-    display: block;
-    padding-top: 75px;
-    margin: 0 50px 0 50px;
-}
-
-.vote-tournois {
-    position: fixed;
-    width: 40%;
-    height: 80%;
-    background: #3b3838;
-    left: 30%;
-    top: 10%;
-    border-radius: 10px;
-    padding: 10px;
-    display: none;
-}
-
-.close {
-    cursor: pointer;
-    color: red;
-    background: none;
-    border: none;
-    font-size: 24px;
-}
-
-.titre {text-align: center;}
-
-.vote-tournois > img {
-    width: 80%;
-}
-
-.carrousel {
-    display: flex;
-    justify-content: flex-start;
-    overflow: auto;
-}
-
-.carrousel > img {
-    padding: 10px;
-}
-
-.footer > h4
-{
-    padding: 20px;
-    margin: 0 auto;
-}
-
 .corps {
+    padding-top: 100px;
+}
+
+.flex {
     display: flex;
-    margin: 100px;
 }
 
 .block {
     display: block;
-}
-
-.inscription, .connexion, .interface {
-    width: 100%;
-}
-
-.interface {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.interface-item {
-    margin: 30px;
 }
 
 .gauche,
@@ -104,32 +48,106 @@ body
     width: 75%;
 }
 
-.image, .register-img
+.titre
 {
-    width: 80%;
-}
-
-.switch-navbar
-{
-    display: none;
-}
-
-.active
-{
-    margin-top: 0;
-}
-
-.tournois { display: none; }
-
-.tournoi {
-    width: 80%;
-    align-items: center;
-    margin-left: 10%;
-}
-
-.tournois > h1 {
     text-align: center;
-    padding-top: 100px;
+}
+
+.carte-jeu {
+    position: fixed;
+    width: 40%;
+    min-height: 80%;
+    background: #3b3838;
+    left: 30%;
+    top: 8%;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    border: white 1px solid;
+    text-align: center;
+}
+
+.image_jeu {
+    width: 100%;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+    background: none;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+}
+
+.carrousel {
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.carrousel > img {
+    width: 300px;
+    padding: 10px;
+}
+
+input
+{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3px;
+}
+
+button[type=submit] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+label {
+    font-weight: 700;
+}
+
+.submitbtn
+{
+    float: right;
+    background: #25C7D1;
+    margin-top: 25px;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+
+.submitbtn:hover
+{
+    background: #26a6b0;
+}
+
+form > h2
+{
+    text-align: center;
+}
+
+select
+{
+    height: 35px;
+    width: 100%;
+}
+
+form
+{
+    width: 100%;
+}
+
+.plateformes
+{
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .plateformes-div {
@@ -137,66 +155,23 @@ body
     margin-left: 25%;
 }
 
-.pourcentage
-{
-    float: right;
+.redirect {
+    color: #0069d9;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.selected {
-    background: #7abaff;
+.redirect:hover {
+    color: #007bff;
 }
 
-.progress-bar
-{
-    height: 35px;
-    width: 100%;
-    border-radius: 5px;
-    background: #ffffff;
-    margin-top: 30px;
+h4 {
+    margin-bottom: -10px;
 }
 
-.progression {
-    background: #25C7D1;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.timer
-{
-    text-align: center;
-}
-
-.timer-div
-{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.timer-div > div
-{
-    margin: 10px;
-}
-
-.vote-img {
-    width: 300px;
-}
-
-.quiz {
-    text-align: center;
-    margin: 100px;
-}
-
-.proposition {
-    width: calc(50% - 10px);
-}
-
-.question {
-    padding-top: 60px;
-}
 
 @media screen and (max-width: 950px) {
-    .corps, .quiz {
+    .flex {
         display: block;
         margin: 0 50px 0 50px;
     }
@@ -210,64 +185,3 @@ body
         margin-top: 50px;
     }
 }
-
-/*
-    Début CSS pour le responsive du navbar
-*/
-@media screen and (max-width: 600px) {
-    .navbar {
-        position: fixed;
-        z-index: 1000;
-        width: 100%;
-        height: 100vh;
-        display: block;
-        margin-top: -100vh;
-        transition: margin-top 0.3s ease-in-out;
-    }
-
-    .corps, .quiz {
-        display: block;
-        margin: 50px 50px 0 50px;
-    }
-
-    .switch-navbar {
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        width: 100%;
-        background: #383838;
-        text-align: center;
-        display: block;
-    }
-
-    .switch-navbar > ul {
-        height: 48px;
-    }
-
-    ul {
-        display: block;
-        margin: -23px -10px -10px;
-        font-size: 18px;
-    }
-
-    li {
-        margin: 20px;
-    }
-
-    .left > ul > li {
-        margin-top: 10%;
-    }
-
-    .show-navbar {
-        cursor: pointer;
-        width: 50px;
-    }
-
-    .proposition {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-/*
-    Fin CSS pour le responsive du navbar
-*/
