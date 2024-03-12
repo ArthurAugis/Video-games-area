@@ -6,7 +6,7 @@ class UsersRules
 {
     public function password($value, ?string &$error = null): bool
     {
-        $pattern = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/';
+        $pattern = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W])[A-Za-z\d\W]+$/';
 
         // Longueur de 12 caractères minimum et minimum 1 minuscule, 1 majuscule, 1 chiffre, 1 caractère spécial
         if (strlen($value) >= 12 && preg_match($pattern, $value)) {
@@ -33,7 +33,7 @@ class UsersRules
             $missingCriteria[] = "au moins 1 chiffre";
         }
 
-        if (!preg_match('/[@$!%*?&]/', $value)) {
+        if (!preg_match('/[\W]/', $value)) {
             $missingCriteria[] = "au moins 1 caractère spécial";
         }
 
