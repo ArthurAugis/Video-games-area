@@ -24,4 +24,4 @@ The website features:
 ![CodeIgniter Badge](https://img.shields.io/badge/CodeIgniter-EF4223?logo=codeigniter&logoColor=fff&style=for-the-badge)
 
 ## Website to view the project
-🚧 Work in progress... 🚧
+https://gamearea.arthuraugis.fr
