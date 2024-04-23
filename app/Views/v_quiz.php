@@ -17,7 +17,7 @@ $quiz_json = json_encode($quiz);
     <?php
     $session = \Config\Services::session();
     if (session()->get('login')) {
-        echo form_open(base_url() . "public/scoreboardQuiz");
+        echo form_open(base_url() . "scoreboardQuiz");
 
         $data = array(
             'name' => 'score-input',
@@ -41,7 +41,7 @@ $quiz_json = json_encode($quiz);
         echo form_close();
     }
 
-    echo anchor(base_url('public/'), "<button class='return_accueil_btn'>Retourner à l'accueil</button>")
+    echo anchor(base_url(), "<button class='return_accueil_btn'>Retourner à l'accueil</button>")
     ?>
 </div>
 <script>

@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/ajoutCategorie");
+        echo form_open(base_url() . "admin/ajoutCategorie");
 
         echo '<p>';
         echo form_label('Ajouter une catégorie :') . "<br>";
@@ -36,7 +36,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

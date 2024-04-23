@@ -23,7 +23,7 @@
         <?php
         $session = \Config\Services::session();
         // si oui créer le bouton pour voter (+ input invisible)
-        echo form_open(base_url() . "public/tournois", array('class' => 'inscription_form'));
+        echo form_open(base_url() . "tournois", array('class' => 'inscription_form'));
 
         $data = array(
             'name' => 'jeu-input',
@@ -97,7 +97,7 @@
         //requête ajax pour récupérer toutes les sessions de tournois
         $.ajax({
             type: 'POST',
-            url: '<?php echo base_url("public")?>/ajax/getSessionsTournoi',
+            url: '<?php echo base_url("")?>/ajax/getSessionsTournoi',
             data: data,
             success: function (response) {
                 var categories = [];
@@ -230,7 +230,7 @@
         var selectedText = this.options[this.selectedIndex].text;
 
         // fait une redirection vers la page vote de la plateforme selectionnée
-        window.location.href = '<?php echo base_url("public/tournois"); ?>/' + selectedText;
+        window.location.href = '<?php echo base_url("tournois"); ?>/' + selectedText;
     });
     //#endregion
 </script>

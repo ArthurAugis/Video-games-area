@@ -53,7 +53,7 @@ if (!$has_vote) {
             // vérifie si l'utilisateur est connecté
             if (session()->get('login')) {
                 // si oui créer le bouton pour voter (+ input invisible)
-                echo form_open(base_url() . "public/vote");
+                echo form_open(base_url() . "vote");
 
                 $data = array(
                     'name' => 'jeu-input',
@@ -198,7 +198,7 @@ if (!$has_vote) {
         var selectedText = this.options[this.selectedIndex].text;
 
         // fait une redirection vers la page vote de la plateforme selectionnée
-        window.location.href = '<?php echo base_url("public/vote"); ?>/' + selectedText;
+        window.location.href = '<?php echo base_url("vote"); ?>/' + selectedText;
     });
     //#endregion
 

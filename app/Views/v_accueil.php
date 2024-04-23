@@ -22,7 +22,7 @@
             <?php
             $proprieteImage =
                 [
-                    'src' => '/public/img/magicarp.png',
+                    'src' => '/img/magicarp.png',
                     'alt' => 'Magicarpe',
                     'class' => 'image'
                 ];
@@ -36,7 +36,7 @@
         <div class="ajout-commentaire">
             <?php
             if (session()->get('login') && $participe) {
-                echo form_open(base_url() . "public/");
+                echo form_open(base_url());
 
 
 
@@ -111,7 +111,7 @@
                     echo '<p>' . nl2br(esc($commentaire->commentaire_tournois)) . '</p>';
 
                     if (session()->get('login') === $commentaire->pseudo_utilisateur || session()->get('admin') === "1") {
-                        echo form_open(base_url() . "public/");
+                        echo form_open(base_url());
                         $data = array(
                             'name' => 'suppr_commentaire',
                             'id' => 'suppr_commentaire',

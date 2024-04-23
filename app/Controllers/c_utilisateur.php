@@ -18,7 +18,7 @@ class c_utilisateur extends BaseController
 
         // vérifie si l'utilisateur est connecté
         if (!session()->get('mail') && !session()->get('mdp')) {
-            return redirect()->to(base_url("public/utilisateur/inscription"));
+            return redirect()->to(base_url("utilisateur/inscription"));
         } else {
             return view('v_header')
                 . view('utilisateur/v_utilisateur')
@@ -106,7 +106,7 @@ class c_utilisateur extends BaseController
                     $session->set('login', $inscrire_login);
                     $session->set('admin', 0);
                     $info['titre'] = '';
-                    return redirect()->to(base_url("public/utilisateur"));
+                    return redirect()->to(base_url("utilisateur"));
                 }
             } else {
                 // ne respecte pas les conditions
@@ -176,7 +176,7 @@ class c_utilisateur extends BaseController
                             $session->set('login', $user->pseudo);
                             $session->set('admin', $user->admin);
 
-                            header("Location: " . base_url() . 'public/utilisateur');
+                            header("Location: " . base_url() . 'utilisateur');
                             exit;
                         } else {
                             // Mot de passe incorrect
@@ -222,7 +222,7 @@ class c_utilisateur extends BaseController
         $session->remove('admin');
         $session->destroy();
 
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit;
     }
 
@@ -504,7 +504,7 @@ class c_utilisateur extends BaseController
             $session->destroy();
         }
 
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit;
     }
 }

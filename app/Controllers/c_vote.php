@@ -96,7 +96,7 @@ class c_vote extends BaseController
                 return view('v_header') . view('v_vote', $data) . view('v_footer');
             } else {
                 // si la plateforme n'existe pas l'utilisateur est renvoyé à la page de vote par défaut.
-                header("Location: " . base_url() . 'public/vote');
+                header("Location: " . base_url() . 'vote');
                 exit;
             }
         } else {
@@ -124,7 +124,7 @@ class c_vote extends BaseController
                 return view('v_header') . view('v_vote', $data) . view('v_footer');
             } else {
                 // si la plateforme n'existe pas l'utilisateur est renvoyé à la page de vote par défaut.
-                header("Location: " . base_url() . 'public/vote');
+                header("Location: " . base_url() . 'vote');
                 exit;
             }
         }

@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/ajoutTournoi");
+        echo form_open(base_url() . "admin/ajoutTournoi");
 
         echo "<h1>Ajouter un tournoi</h1>";
 
@@ -33,7 +33,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

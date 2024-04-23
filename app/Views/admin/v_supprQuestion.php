@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/supprQuestion");
+        echo form_open(base_url() . "admin/supprQuestion");
 
         echo '<p>';
         echo form_label('Supprimer une question :') . "<br>";
@@ -31,7 +31,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

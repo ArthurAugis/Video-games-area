@@ -4,7 +4,7 @@
     $session = \Config\Services::session();
     // vérifie qu'il y a bien un age de stocké dans la session
     if (session()->get('age') || session()->get('age') == 0) {
-        echo form_open(base_url() . "public/utilisateur/changerage");
+        echo form_open(base_url() . "utilisateur/changerage");
 
         echo '<p>';
         echo form_label('Changer ton âge :') . "<br>";
@@ -33,7 +33,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

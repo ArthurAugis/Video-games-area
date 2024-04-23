@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/ajoutJeuAPlateforme");
+        echo form_open(base_url() . "admin/ajoutJeuAPlateforme");
 
         echo "<h1>Ajouter un jeu à une plateforme</h1>";
 
@@ -46,7 +46,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

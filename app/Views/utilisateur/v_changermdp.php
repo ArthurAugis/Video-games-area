@@ -4,7 +4,7 @@
     $session = \Config\Services::session();
     // vérifie qu'il y a bien un login de stocké dans la session
     if (session()->get('login')) {
-        echo form_open(base_url() . "public/utilisateur/changermdp");
+        echo form_open(base_url() . "utilisateur/changermdp");
 
         echo '<p>';
         echo form_label('Changer ton mot de passe (Minimum 12 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractères spécial) :') . "<br>";
@@ -47,7 +47,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

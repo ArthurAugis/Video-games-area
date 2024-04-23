@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/ajoutRecompense");
+        echo form_open(base_url() . "admin/ajoutRecompense");
 
         echo "<h1>Ajouter une récompense</h1>";
 
@@ -57,7 +57,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

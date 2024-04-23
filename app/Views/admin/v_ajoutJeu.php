@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/ajoutJeu");
+        echo form_open(base_url() . "admin/ajoutJeu");
 
         echo '<h1>Ajouter un jeu</h1>';
         echo '<p>';
@@ -95,7 +95,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

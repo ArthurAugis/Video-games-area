@@ -4,7 +4,7 @@
     $session = \Config\Services::session();
     // vérifie qu'il y a bien un login de stocké dans la session
     if (session()->get('login')) {
-        echo form_open(base_url() . "public/utilisateur/changerpseudo");
+        echo form_open(base_url() . "utilisateur/changerpseudo");
 
         echo '<p>';
         echo form_label('Changer ton pseudo :') . "<br>";
@@ -33,7 +33,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

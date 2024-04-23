@@ -2,7 +2,7 @@
     <h1><?= $titre; ?></h1>
     <?php
     if (session()->get('admin')) {
-        echo form_open(base_url() . "public/admin/modifDatesVote");
+        echo form_open(base_url() . "admin/modifDatesVote");
 
         echo "<h1>Modification des dates de vote</h1>";
 
@@ -50,7 +50,7 @@
 
         echo form_close();
     } else {
-        header("Location: " . base_url() . 'public/utilisateur');
+        header("Location: " . base_url() . 'utilisateur');
         exit();
     }
     ?>

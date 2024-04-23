@@ -62,7 +62,7 @@
         // requete ajax pour afficher toutes les sessions du tournoi
         $.ajax({
             type: 'POST',
-            url: '<?php echo base_url("public")?>/ajax/getSessionsTournoi',
+            url: '<?php echo base_url("")?>/ajax/getSessionsTournoi',
             data: data,
             success: function (response) {
                 var sessions = [];
@@ -148,7 +148,7 @@
         var selectedText = this.options[this.selectedIndex].text;
 
         // fait une redirection vers la page vote de la plateforme selectionnée
-        window.location.href = '<?php echo base_url("public/prix"); ?>/' + selectedText;
+        window.location.href = '<?php echo base_url("prix"); ?>/' + selectedText;
     });
     //#endregion
 
@@ -166,7 +166,7 @@
 
         $.ajax({
             type: 'POST',
-            url: '<?php echo base_url("public")?>/ajax/getRecompenses',
+            url: '<?php echo base_url("")?>/ajax/getRecompenses',
             data: data,
             success: function (response) {
                 if(response.data !== null) {

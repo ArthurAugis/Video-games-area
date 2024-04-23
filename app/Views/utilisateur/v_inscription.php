@@ -4,7 +4,7 @@
             <div class="inscription">
                 <h1>S'inscrire</h1>
                 <?php
-                echo form_open(base_url() . "public/utilisateur/inscription");
+                echo form_open(base_url() . "utilisateur/inscription");
 
                 echo '<p>';
                 echo form_label('Mail :') . "<br>";
@@ -117,14 +117,14 @@
                 echo form_close();
                 ?>
 
-                <p>Déjà un compte ? <?=anchor(base_url() . 'public/utilisateur/connexion', "Connecte toi", array('class' => 'redirect'));?></p>
+                <p>Déjà un compte ? <?=anchor(base_url() . 'utilisateur/connexion', "Connecte toi", array('class' => 'redirect'));?></p>
             </div>
     </div>
     <div class="droite">
         <?php
         $proprieteImage =
             [
-                'src' => '/public/img/link_inscription.jpg',
+                'src' => '/img/link_inscription.jpg',
                 'alt' => "Link qui s'enregistre",
                 'class' => 'image'
             ];
