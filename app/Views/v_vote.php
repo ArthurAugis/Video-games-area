@@ -243,8 +243,8 @@ if (!$has_vote) {
             clearInterval(intervalTimer);
 
             // vérifier si il y a vote et le rend invisible
-            if(document.querySelector('.vote')) {
-                document.querySelector('.vote').style.display = 'none';
+            if(document.querySelector('.corps')) {
+                document.querySelector('.corps').style.display = 'none';
             }
 
             // vérifier si il y a timer et le rend invisible
